@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
-  get 'posts/show'
+  resources :posts
+  resources :blogs
 
-  get 'blogs/index'
+  match '/', to: 'blogs#index', constraints: { subdomain: 'www' }, via: [:get, :post, :put, :patch, :delete]
+  match '/', to: 'blogs#show', constraints: { subdomain: /.+/ }, via: [:get, :post, :put, :patch, :delete]
 
-  get 'blogs/show'
+  root to: "blogs#index"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

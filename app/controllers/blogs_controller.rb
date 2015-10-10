@@ -3,13 +3,15 @@ class BlogsController < ApplicationController
     @blogs = Blog.all
   end
 
+  def new
+    @blog = Blog.new
+  end
+
   def show
     @posts = @blog.posts
   end
 
-  def new
-    @blog = Blog.new
-  end
+
 
   def create
     @blog = Blog.create(blog_params)

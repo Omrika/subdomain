@@ -1,4 +1,13 @@
-<h1><%= @post.title %></h1>
-<p>
-	<%= @post.body %>
-</p>
+<center>
+	<h1>Title:</h1>
+	<h4><%= @post.title %></h4><br>
+</center>
+
+<center>
+	<h1>Body:</h1>
+	<h4><p><%= @post.body %></p><br></h4>
+</center>
+
+<center>
+	<%= link_to "Go Back To Your Blog", root_url %>
+</center>

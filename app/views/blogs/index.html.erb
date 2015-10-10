@@ -1,4 +1,7 @@
-<h1>Blog Directory</h1>
+<h1>Blog Directory</h1><br />
+
+<h1><%= link_to "Make A New Blog", new_blog_path %></h1>
+
 <ul>
   <% @blogs.each do |blog| %>
     <li>

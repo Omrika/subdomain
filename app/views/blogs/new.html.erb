@@ -1,0 +1,8 @@
+<h1>Want Your Own Subdomain!?</h1>
+<%= form_for @blog do |f| %>
+  <%=f.label :name %>
+  <%=f.text_field :name %>
+  <%=f.label :subdomain %>
+  <%=f.text_field :subdomain %>
+  <%= f.submit "Create Blog" %>
+<% end %>

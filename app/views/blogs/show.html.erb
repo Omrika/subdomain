@@ -1,14 +1,8 @@
 <h1><%= @blog.name %></h1><br />
-<% @posts.each do |post| %>
+<h3><%= link_to "Make A New Blog Post", :controller => "posts", :action => "new"%></h3><br>
+<% @blog.posts.each do |post| %>
 <h3><%= post.title %></h3>
 <p><%= truncate post.body, length: 160 %></p>
 <%= link_to "Read More", post %>
 <% end %>
-
-I would like a "Make New Post" link that goes to the
-posts controller and into the new action. As of right now that action
-does not exist so it would have to made alongside with a new.html.erb under the
-posts views.
-
-I would also like to have a "Show All Blogs"
-link here so that we can go back to the index page
+<h3><%= link_to "Go To Blog Directory", root_url(:subdomain => "false") %></h3><br>

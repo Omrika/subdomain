@@ -1,0 +1,4 @@
+<%= @post.title %><br>
+<%= @post.body %>
+<br><h3><%= link_to "Go To Blog Directory", root_url(:subdomain => "false")%></h3><br>
+<%= link_to "Go to Your Blog", :controller => "blogs", :action => "show" %>
